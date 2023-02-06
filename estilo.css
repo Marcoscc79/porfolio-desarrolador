@@ -15,8 +15,7 @@ body{
 
 /* SECCION I N I C I O */
 .inicio{
-    background:linear-gradient(to right, #000c67, #007be5);
-    clip-path: polygon(0 0, 100% 0, 100% 46%, 47% 84%, 0 45%);
+    background:linear-gradient(to right, #672e00, #e59500);
     height: 90vh;
     padding:  0 20px;
 }
@@ -34,8 +33,8 @@ body{
 .inicio .logo{
     display: flex;
     align-items: center;
-    color: #00deef;
-    font-size: 25px;
+    color: #f9fd03c0;
+    font-size: 30px;
 }
 .inicio .logo i{
     display: inline-block;
@@ -50,7 +49,7 @@ body{
     border: 2px solid transparent;
 }
 #inicio header nav a:hover{
-    border-bottom: 2px solid #ff5b00;
+    border-bottom: 2px solid #ff0022;
 }
 .inicio .redes a{
     text-decoration: none;
@@ -63,23 +62,24 @@ body{
 }
 .inicio .fila{
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
     padding-bottom: 100px;
 }
 .inicio .fila .col{
     width: 50%;
 }
 .inicio .fila .col h2{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     font-size: 40px;
 }
 .inicio .fila .col p{
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    font-size: 15px;
 }
 
 .inicio .fila .col .contenedor-img{
-    max-width: 400px;
-    margin: auto;
+    max-width: 500px;
+    margin: 0 100px;
 }
 .inicio .fila .col .contenedor-img img{
     width: 100%;
@@ -88,9 +88,10 @@ body{
     background: none;
     width: fit-content;
     padding: 5px 40px;
-    border: 2px solid #ff5b00;
-    color: #fff;
-    background:linear-gradient(to right, #ff5b00, #ff9900);
+    border: 2px solid #367423e3;
+    color: #076e07;
+    font-weight: 800;
+    background:linear-gradient(to right, #00ff0dad, #7bff00);
     transition: .5s;
     cursor: pointer;
 }
@@ -119,25 +120,26 @@ body{
     margin: auto;
     padding: 0 20px;
     position: relative;
-    top: -170px;
+    top: -100px;
     z-index: 10;
 }
 .servicios .fila{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .servicios .fila .col{
     text-align: center;
-    width: 30%;
+    width: 32%;
 }
 .servicios .fila .col .card{
     border: 1px solid #8d8d8d;
-    height: 400px;
+    height: 600px;
     background-color: #fff;
     padding: 30px;
     border-radius: 20px;
     position: relative;
+    margin-top: 50px;
 }
 .servicios .icono{
     width: 70px;
@@ -173,9 +175,10 @@ body{
     margin-bottom: 20px;
 }
 .servicios .card p{
-    color: #8d8d8d;
+    color: #6b6565;
     line-height: 28px;
     font-size: 12px;
+    
 }
 .servicios .card a{
     text-decoration: none;
@@ -184,6 +187,7 @@ body{
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 /* seccion HABILIDADES */
 .habilidades{
@@ -195,10 +199,14 @@ body{
 }
 .habilidades h2{
     text-align: center;
+    margin-bottom: 20px;
 }
 .habilidades .contenedor-habi{
     max-width: 1100px;
     margin: auto;
+}
+.habilidades .contenedor-habi .tamaño-letra{
+    font-size: 40px;
 }
 .habilidades .fila{
     display: flex;
@@ -239,10 +247,12 @@ body{
 }
 .trabajos h2{
     text-align: center;
+    font-size: 40px;
 }
 .trabajos nav{
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
+    font-size: 25px;
 }
 .trabajos nav a{
     text-decoration: none;
@@ -258,7 +268,7 @@ body{
 }
 /* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
 .borde{
-    border: 3px solid #ff5b00 !important;  
+    border: 3px solid #ff5b00 !important;
 }
 .trabajos .galeria .item img{
     width: 100%;
@@ -327,6 +337,7 @@ body{
 .contacto h2{
     text-align: center;
     padding-bottom: 30px;
+    font-size: 40px;
 }
 .contacto .contenedor-contacto .fila{
     display: flex;
@@ -374,6 +385,12 @@ footer{
     .inicio{
         clip-path: none;
     }
+    .servicios .fila .col .card{
+        height: auto;
+    }
+    p {
+        padding-bottom: 30px;
+    }
 }
 @media screen and (max-width:800px){
     .redes{
@@ -402,12 +419,8 @@ footer{
     #icono-nav{
         display: block;
     }
-
     .inicio{
         height: auto;
-    }
-    .inicio .fila{
-        display: block;
     }
     .inicio .fila .col{
         width: 100%;
@@ -417,7 +430,7 @@ footer{
         margin-top: 20px;
     }
     .inicio .fila .col .contenedor-img{
-        width: 50%;
+        width: 110%;
         margin-top: 30px;
     }
 
@@ -436,12 +449,24 @@ footer{
     .servicios .fila .col .card{
         margin-bottom: 20px;
     }
+
     .habilidades{
         position: static;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .habilidades .fila{
+        display: block;
+        margin-bottom: 0px;
+    }
+    .habilidades .fila .col{
+        width: 70%;
+        margin: auto;
     }
 
     .trabajos nav a{
-        margin: 0 5px;
+        margin: 20px 50px;
     }
 
     .contacto .fila{
